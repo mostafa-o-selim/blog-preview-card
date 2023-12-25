@@ -1,0 +1,103 @@
+$colors: (
+  "yellow": hsl(47, 88%, 63%),
+  "white": hsl(0, 0%, 100%),
+  "grey": hsl(0, 0%, 50%),
+  "black": hsl(0, 0%, 7%)
+);
+
+#blogCard {
+  background-color: map-get($colors, "yellow");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  .card {
+    $radius: 1rem;
+    background-color: map-get($colors, "white");
+    border: 1px solid map-get($colors, "black");
+    border-radius: $radius;
+    box-shadow: 0.5rem 0.5rem 0 0 map-get($colors, "black");
+    width: 87.2%;
+    max-width: 24rem;
+    padding: 1.5rem;
+
+    img[alt="Card"] {
+      border-radius: $radius * 0.5;
+      max-width: 100%;
+    }
+
+    .learn {
+      background-color: map-get($colors, "yellow");
+      border-radius: 0.25rem;
+      color: map-get($colors, "black");
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin: 1.5rem 0;
+      padding: 0.5rem 0.75rem;
+      text-decoration: none;
+    }
+
+    .foundations {
+      font-size: 1.5rem;
+      margin: 1.125rem 0;
+
+      a {
+        color: map-get($colors, "black");
+        text-decoration: none;
+
+        &:hover {
+          color: map-get($colors, "yellow");
+        }
+
+      }
+
+    }
+
+    p.grey {
+      color: map-get($colors, "grey");
+      line-height: 1.5;
+    }
+
+    .user {
+      color: map-get($colors, "black");
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 1.425rem;
+      text-decoration: none;
+
+      img {
+        aspect-ratio: 1 / 1;
+        width: 2rem;
+      }
+
+      .username {
+        font-weight: bold;
+        margin-left: 0.75rem;
+      }
+
+    }
+
+  }
+
+}
+
+body {
+  font-weight: 400;
+  font-family: 'Figtree', sans-serif;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  font-style: italic;
+  src: url(../fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  src: url(../fonts/Figtree-VariableFont_wght.ttf);
+}
